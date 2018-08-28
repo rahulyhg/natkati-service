@@ -1,0 +1,22 @@
+spring:
+  profiles.active: "development"
+  jpa:
+    hibernate:
+      ddl-auto : none
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/natkati
+    username: natkati_service
+    password: Access4SERVICE
+
+---
+logging:
+  level:
+    root: INFO
+    com.smartdroid.thalaivar: INFO
+    org.hibernate: INFO
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql: trace
