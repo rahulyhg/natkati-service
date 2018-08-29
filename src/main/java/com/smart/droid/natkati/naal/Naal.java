@@ -13,6 +13,7 @@ public class Naal {
     @Id
     private int id;
 
+    @Column(name = "cal_date")
     private LocalDate calDate;
 
     private String maadam;
@@ -21,20 +22,24 @@ public class Naal {
 
     private String tithi;
 
+    @Column(name = "tithi_time")
     private String tithiTime;
 
     private String tithi1;
 
+    @Column(name = "tithi1_time")
     private String tithi1Time;
 
     private String paksha;
 
     private String nakshatra;
 
+    @Column(name = "nakshatra_time")
     private String nakshatraTime;
 
     private String nakshatra1;
 
+    @Column(name = "nakshatra1_time")
     private String nakshatra1Time;
 
     private String karanam;
@@ -47,6 +52,7 @@ public class Naal {
 
     private String amirdadhi;
 
+    @Column(name = "update_date")
     private LocalDate updateDate;
 
     public Naal() {
