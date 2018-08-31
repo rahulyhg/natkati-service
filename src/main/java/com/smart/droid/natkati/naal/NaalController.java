@@ -1,6 +1,5 @@
 package com.smart.droid.natkati.naal;
 
-import com.sun.media.jfxmedia.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +21,6 @@ public class NaalController {
 
     @GetMapping(path = "/naal/{id}")
     public @ResponseBody Naal naal(@PathVariable Integer id) {
-        Logger.logMsg(Logger.INFO, "Path Variable : " + id);
         return naalRepository.findById(id)
                 .orElseThrow(() -> new NaalNotFoundException(id));
     }
