@@ -13,12 +13,23 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/natkati
     username: natkati_service
     password: Access4SERVICE
+---
+spring:
+  profiles: cloud
+  datasource:
+    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/ad_51c5bbe012c9b29?useUnicode=yes&characterEncoding=UTF-8
+    username: bdfb9ecc26cdf2
+    password: 23d5e1aa
+    driver-class-name: com.mysql.jdbc.Driver
 
+#Server version: 5.0.96-log
+#Server: 166.62.8.87 via TCP/IP
+#User: droidsql@182.50.131.34
 ---
 logging:
   level:
     root: INFO
-    com.smartdroid.thalaivar: INFO
+    com.smart.droid.natkati: INFO
     org.hibernate: INFO
     org.hibernate.SQL: debug
-    org.hibernate.type.descriptor.sql: trace
+    #org.hibernate.type.descriptor.sql: trace

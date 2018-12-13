@@ -15,22 +15,32 @@ public class NaalController {
     private NaalRepository naalRepository;
 
     @GetMapping(path = "/all")
-    public @ResponseBody Iterable<Naal> getAllNatkal() {
+    public @ResponseBody
+    Iterable<Naal> getAllNatkal() {
         return naalRepository.findAll();
     }
 
+    @GetMapping(path = "/{year}")
+    public @ResponseBody
+    Iterable<Naal> getNatkalByYear() {
+        //return naalRepository.findAll();
+        return null;
+    }
+
+    @GetMapping(path = "/{month}")
+    public @ResponseBody
+    Iterable<Naal> getNatkalByYearMonth() {
+        //return naalRepository.findAll();
+        return null;
+    }
+
+
     @GetMapping(path = "/naal/{id}")
-    public @ResponseBody Naal naal(@PathVariable Integer id) {
+    public @ResponseBody
+    Naal naal(@PathVariable Integer id) {
         return naalRepository.findById(id)
                 .orElseThrow(() -> new NaalNotFoundException(id));
     }
 
-    /*
-    @GetMapping(path = "/{year}/{month}")
-    public @ResponseBody
-    Iterable<Naal> getMonthNatkal() {
-        return naalRepository.findAll();
-    }
-    */
 
 }
