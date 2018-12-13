@@ -11,9 +11,9 @@ After installing or unzipping the Java JDK, one of the following environment var
 ## Clone the project into local 
 Cloning the project is a one time activity.  Once cloned the local repository can be used for further development
 
-Copy the SSH Git repository URL, open command prompt and switch to the folder of your choice (eg:- C:\Workspace\NAVOSWorkSpace) and clone the repository
+Copy the HTTPS Git repository URL, open command prompt and switch to the folder of your choice (eg:- C:\Workspace\SDWorkSpace) and clone the repository
 ```
-git clone git@github.ford.com:NAVOS/navos-service-progressive-amendments.git
+git clone https://github.com/SmartDroidies/natkati-service.git
 ```  
  
 ## Build & Run Project (In Windows Command Prompt)
