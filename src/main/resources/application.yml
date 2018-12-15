@@ -1,5 +1,5 @@
 spring:
-  profiles.active: "development"
+  profiles.active: "cloud"
   jpa:
     hibernate:
       ddl-auto : none
@@ -17,9 +17,9 @@ spring:
 spring:
   profiles: cloud
   datasource:
-    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/ad_51c5bbe012c9b29?useUnicode=yes&characterEncoding=UTF-8
-    username: bdfb9ecc26cdf2
-    password: 23d5e1aa
+    url: jdbc:mysql://droidsql.db.11915239.hostedresource.com/droidsql?useUnicode=yes&characterEncoding=UTF-8
+    username: droidsql
+    password: Droid2@SQL
     driver-class-name: com.mysql.jdbc.Driver
 
 #Server version: 5.0.96-log
