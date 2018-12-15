@@ -1,11 +1,12 @@
 spring:
-  profiles.active: "cloud"
+  profiles.active: "development"
   jpa:
     hibernate:
       ddl-auto : none
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
 ---
 spring:
   profiles: development
@@ -13,14 +14,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/natkati
     username: natkati_service
     password: Access4SERVICE
----
-spring:
-  profiles: cloud
-  datasource:
-    url: jdbc:mysql://droidsql.db.11915239.hostedresource.com/droidsql?useUnicode=yes&characterEncoding=UTF-8
-    username: droidsql
-    password: Droid2@SQL
-    driver-class-name: com.mysql.jdbc.Driver
 
 #Server version: 5.0.96-log
 #Server: 166.62.8.87 via TCP/IP
