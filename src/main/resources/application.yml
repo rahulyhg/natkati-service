@@ -1,5 +1,12 @@
 spring:
-  profiles.active: "development"
+  profiles.active: "cloud"
+server:
+  port : 9000
+management:
+  port : 9001
+  address : 127.0.0.1
+---
+spring:
   jpa:
     hibernate:
       ddl-auto : none
@@ -14,6 +21,15 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/natkati
     username: natkati_service
     password: Access4SERVICE
+
+---
+spring:
+  profiles: cloud
+  datasource:
+    url: jdbc:mysql://us-cdbr-iron-east-01.cleardb.net/ad_41d29f4f1d89723?useUnicode=yes&characterEncoding=UTF-8
+    username: bbbdce87d3ca67
+    password: 7f197900
+    driver-class-name: com.mysql.jdbc.Driver
 
 #Server version: 5.0.96-log
 #Server: 166.62.8.87 via TCP/IP

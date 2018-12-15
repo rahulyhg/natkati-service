@@ -31,7 +31,7 @@ public class NaalRepositoryTest {
         entityManager.flush();
 
         Optional<Naal> found = naalRepository.findById(2019001);
-        assertThat(found.get().getCalDate()).isEqualTo(LocalDate.of(2019,1,1));
+        assertThat(found.get().getCalDate()).isEqualTo(LocalDate.of(2019, 1, 1));
     }
 
     @Test
@@ -40,8 +40,8 @@ public class NaalRepositoryTest {
         entityManager.persist(naalTest);
         entityManager.flush();
 
-        Naal found = naalRepository.findByCalDate(LocalDate.of(2019,1,1));
-        assertThat(found.getCalDate()).isEqualTo(LocalDate.of(2019,1,1));
+        Optional<Naal> found = naalRepository.findByCalDate(LocalDate.of(2019, 1, 1));
+        assertThat(found.get().getCalDate()).isEqualTo(LocalDate.of(2019, 1, 1));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class NaalRepositoryTest {
 
     private Naal createNaalInstanse() {
         Naal naal = new Naal();
-        naal.setCalDate(LocalDate.of(2019,1,1));
+        naal.setCalDate(LocalDate.of(2019, 1, 1));
 
         naal.setId(2019001);
 

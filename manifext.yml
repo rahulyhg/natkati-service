@@ -1,0 +1,9 @@
+---
+applications:
+- name: natkati-service
+  buildpack: java_buildpack
+  memory: 768M
+  instances: 1
+  random-route: true
+services:
+  - natkati

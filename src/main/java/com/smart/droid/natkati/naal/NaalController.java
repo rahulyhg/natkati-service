@@ -1,5 +1,6 @@
 package com.smart.droid.natkati.naal;
 
+import com.smart.droid.natkati.util.TypeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,11 +36,11 @@ public class NaalController {
     }
 
 
-    @GetMapping(path = "/naal/{id}")
+    @GetMapping(path = "/naal/{queryDate}")
     public @ResponseBody
-    Naal naal(@PathVariable Integer id) {
-        return naalRepository.findById(id)
-                .orElseThrow(() -> new NaalNotFoundException(id));
+    Naal naal(@PathVariable String queryDate) {
+        return naalRepository.findByCalDate(TypeUtil.toISOLocalDate(queryDate))
+                .orElseThrow(() -> new NaalNotFoundException(queryDate));
     }
 
 
