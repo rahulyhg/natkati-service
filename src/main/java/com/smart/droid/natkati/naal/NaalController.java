@@ -1,6 +1,9 @@
 package com.smart.droid.natkati.naal;
 
+import com.oracle.tools.packager.Log;
+import com.smart.droid.natkati.util.AppUtil;
 import com.smart.droid.natkati.util.TypeUtil;
+import com.sun.media.jfxmedia.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,13 +31,11 @@ public class NaalController {
         return null;
     }
 
-    @GetMapping(path = "/{month}")
+    @GetMapping(path = "/naal/{year}/{month}")
     public @ResponseBody
-    Iterable<Naal> getNatkalByYearMonth() {
-        //return naalRepository.findAll();
-        return null;
+    Iterable<Naal> getNatkalByYearMonth(@PathVariable Integer year, @PathVariable Integer month) {
+        return naalRepository.findByCalDateBetween(AppUtil.madhamStartDate(year, month), AppUtil.madhamEndDate(year, month));
     }
-
 
     @GetMapping(path = "/naal/{queryDate}")
     public @ResponseBody

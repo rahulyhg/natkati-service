@@ -1,5 +1,5 @@
 spring:
-  profiles.active: "cloud"
+  profiles.active: "development"
 server:
   port : 9000
 management:
@@ -31,9 +31,6 @@ spring:
     password: 7f197900
     driver-class-name: com.mysql.jdbc.Driver
 
-#Server version: 5.0.96-log
-#Server: 166.62.8.87 via TCP/IP
-#User: droidsql@182.50.131.34
 ---
 logging:
   level:
