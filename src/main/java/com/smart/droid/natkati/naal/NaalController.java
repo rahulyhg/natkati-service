@@ -1,9 +1,7 @@
 package com.smart.droid.natkati.naal;
 
-import com.oracle.tools.packager.Log;
 import com.smart.droid.natkati.util.AppUtil;
 import com.smart.droid.natkati.util.TypeUtil;
-import com.sun.media.jfxmedia.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
